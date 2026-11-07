@@ -1,0 +1,16 @@
+.git
+.venv
+.pytest_cache
+__pycache__
+*.pyc
+.env
+.env.*
+! .env.example
+notebooks
+reports
+tests
+work
+frontend/node_modules
+frontend/dist
+data/processed/*
+!data/processed/week4_cold_start_recommendations.csv

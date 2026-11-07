@@ -1,0 +1,2 @@
+No verified public URL is currently available.
+CineMatch has not been deployed. Hosting was approved, but this environment could not reach GitHub or Render and has no authenticated hosting CLI session.

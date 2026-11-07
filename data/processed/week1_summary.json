@@ -1,0 +1,78 @@
+{
+  "ratings": 100836,
+  "users": 610,
+  "movies_in_catalog": 9742,
+  "movies_with_ratings": 9724,
+  "utility_rows": 610,
+  "utility_columns": 9724,
+  "observed_cells": 100836,
+  "total_cells": 5931640,
+  "sparsity_ratio": 0.9830003169443864,
+  "mean_rating": 3.501556983616962,
+  "median_rating": 3.5,
+  "ratings_4_or_5_share": 0.39697131976675,
+  "rating_counts": {
+    "0.5": 1370,
+    "1.0": 2811,
+    "1.5": 1791,
+    "2.0": 7551,
+    "2.5": 5550,
+    "3.0": 20047,
+    "3.5": 13136,
+    "4.0": 26818,
+    "4.5": 8551,
+    "5.0": 13211
+  },
+  "top_10_movies_by_rating_count": [
+    {
+      "movieId": 356,
+      "title": "Forrest Gump (1994)",
+      "rating_count": 329
+    },
+    {
+      "movieId": 318,
+      "title": "Shawshank Redemption, The (1994)",
+      "rating_count": 317
+    },
+    {
+      "movieId": 296,
+      "title": "Pulp Fiction (1994)",
+      "rating_count": 307
+    },
+    {
+      "movieId": 593,
+      "title": "Silence of the Lambs, The (1991)",
+      "rating_count": 279
+    },
+    {
+      "movieId": 2571,
+      "title": "Matrix, The (1999)",
+      "rating_count": 278
+    },
+    {
+      "movieId": 260,
+      "title": "Star Wars: Episode IV - A New Hope (1977)",
+      "rating_count": 251
+    },
+    {
+      "movieId": 480,
+      "title": "Jurassic Park (1993)",
+      "rating_count": 238
+    },
+    {
+      "movieId": 110,
+      "title": "Braveheart (1995)",
+      "rating_count": 237
+    },
+    {
+      "movieId": 589,
+      "title": "Terminator 2: Judgment Day (1991)",
+      "rating_count": 224
+    },
+    {
+      "movieId": 527,
+      "title": "Schindler's List (1993)",
+      "rating_count": 220
+    }
+  ]
+}

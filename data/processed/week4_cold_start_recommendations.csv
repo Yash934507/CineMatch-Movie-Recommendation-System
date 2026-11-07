@@ -1,0 +1,11 @@
+movieId,rating_count,mean_rating,weighted_score,title,genres
+318,317,4.429022082018927,4.3026644391848725,"Shawshank Redemption, The (1994)",Crime|Drama
+2959,218,4.272935779816514,4.129021825301672,Fight Club (1999),Action|Crime|Drama|Thriller
+858,192,4.2890625,4.126354748681191,"Godfather, The (1972)",Crime|Drama
+260,251,4.231075697211155,4.109893186647335,Star Wars: Episode IV - A New Hope (1977),Action|Adventure|Sci-Fi
+296,307,4.197068403908795,4.0996578408427125,Pulp Fiction (1994),Comedy|Crime|Drama|Thriller
+50,204,4.237745098039215,4.092826177877354,"Usual Suspects, The (1995)",Crime|Mystery|Thriller
+527,220,4.225,4.091029071040178,Schindler's List (1993),Drama|War
+2571,278,4.192446043165468,4.087127588966,"Matrix, The (1999)",Action|Sci-Fi|Thriller
+1196,211,4.2156398104265405,4.0788423340262385,Star Wars: Episode V - The Empire Strikes Back (1980),Action|Adventure|Sci-Fi
+356,329,4.164133738601824,4.076722557205404,Forrest Gump (1994),Comedy|Drama|Romance|War

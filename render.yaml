@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: cinematch
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/v1/ready
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: CINEMATCH_ENV
+        value: production
+      - key: CINEMATCH_READ_ONLY_DEMO
+        value: "true"
+      - key: CINEMATCH_DATABASE_URL
+        value: sqlite:////tmp/cinematch-demo.db
+      - key: CINEMATCH_HOST
+        value: 0.0.0.0
+      - key: CINEMATCH_LOG_LEVEL
+        value: INFO
+      - key: CINEMATCH_ENABLE_DOCS
+        value: "false"

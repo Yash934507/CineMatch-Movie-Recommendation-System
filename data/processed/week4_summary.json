@@ -1,0 +1,83 @@
+{
+  "rating_protocol": {
+    "split": "deterministic per-user 80/20 holdout",
+    "seed": 42,
+    "training_ratings": 80672,
+    "held_out_ratings": 20164,
+    "evaluation_sample_size": 2000
+  },
+  "ranking_protocol": {
+    "evaluated_users": 100,
+    "user_selection_seed": 42,
+    "relevance_threshold": 4.0,
+    "sampled_unseen_candidates": 100,
+    "k": 10
+  },
+  "rating_results": {
+    "User-User": {
+      "rmse": 0.9025394640573728,
+      "mae": 0.6872998212942039
+    },
+    "Item-Item": {
+      "rmse": 0.8739527345767684,
+      "mae": 0.6616588960777444
+    },
+    "SVD": {
+      "rmse": 0.8922070912372977,
+      "mae": 0.6835482144296567
+    }
+  },
+  "ranking_results": {
+    "User-User": {
+      "evaluated_users": 100,
+      "k": 10,
+      "precision_at_k": 0.122,
+      "recall_at_k": 0.11488947508604222,
+      "hit_rate_at_k": 0.65,
+      "ndcg_at_k": 0.12739443496578473,
+      "catalog_coverage_at_k": 0.07811537671935948,
+      "unique_recommended_items": 761
+    },
+    "Item-Item": {
+      "evaluated_users": 100,
+      "k": 10,
+      "precision_at_k": 0.309,
+      "recall_at_k": 0.31581759226217465,
+      "hit_rate_at_k": 0.88,
+      "ndcg_at_k": 0.34289967941057653,
+      "catalog_coverage_at_k": 0.06733730240197085,
+      "unique_recommended_items": 656
+    },
+    "SVD": {
+      "evaluated_users": 100,
+      "k": 10,
+      "precision_at_k": 0.375,
+      "recall_at_k": 0.369184572163047,
+      "hit_rate_at_k": 0.89,
+      "ndcg_at_k": 0.49698199575133173,
+      "catalog_coverage_at_k": 0.052042701703962226,
+      "unique_recommended_items": 507
+    }
+  },
+  "selection": {
+    "best_rating_model": "Item-Item",
+    "best_ranking_model": "SVD",
+    "recommended_model": "SVD",
+    "primary_selection_metric": "precision_at_10",
+    "tie_breakers": [
+      "ndcg_at_10",
+      "rmse"
+    ]
+  },
+  "cold_start": {
+    "strategy": "Bayesian-weighted popularity",
+    "prior_weight": 50
+  },
+  "final_demo": {
+    "user_id": 1,
+    "model": "SVD",
+    "recommendation_count": 10,
+    "excludes_known_ratings": true
+  },
+  "elapsed_seconds": 42.35191300000008
+}

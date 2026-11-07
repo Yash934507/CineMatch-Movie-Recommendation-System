@@ -1,0 +1,77 @@
+# Python / local tooling
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Local build and package caches
+work/
+.week8-build/
+*.egg-info/
+frontend/node_modules/
+frontend/dist/
+
+# Local environment and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.key
+*.pem
+*.crt
+*.p12
+**/*secret*
+**/*token*
+**/*credential*
+logs/
+**/logs/
+
+# Local database, model, and runtime state
+*.db
+*.sqlite
+*.sqlite3
+data/cinematch.db
+data/*.db
+**/*.db
+**/*.sqlite3
+
+# Local archives are preserved on disk, but are not part of the source repository.
+*.zip
+
+# Generated/project data that should stay local unless explicitly published
+# Keep only evaluation summaries and the cold-start list required by the app.
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/week1_summary.json
+!data/processed/week2_summary.json
+!data/processed/week3_summary.json
+!data/processed/week4_summary.json
+!data/processed/week4_cold_start_recommendations.csv
+
+# Approved MovieLens Small data may be redistributed under data/raw/README.txt.
+data/raw/*.zip
+data/raw/*.gz
+
+data/raw/.DS_Store
+
+# Local-only workspace files
+.chart-data-*
+.vscode/
+
+# Generated submission media; keep only the current, verified deliverables.
+deliverables/*
+!deliverables/CineMatch_Presentation.pptx
+!deliverables/CineMatch_Project_Report.pdf
+!deliverables/CineMatch_Homepage_Screenshot.png
+!deliverables/CineMatch_Demo_Recommendations_Screenshot.png
+!deliverables/LIVE_WEBSITE_URL.txt

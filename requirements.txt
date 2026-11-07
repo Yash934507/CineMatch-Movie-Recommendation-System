@@ -1,0 +1,15 @@
+numpy>=1.26,<2
+pandas>=2.2,<3
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+pillow>=10,<13
+jupyter>=1.0,<2
+pytest>=8,<9
+scikit-learn>=1.4,<2
+scikit-surprise>=1.1.5,<2
+fastapi>=0.162,<1
+uvicorn>=0.54,<1
+httpx>=0.28,<1
+sqlalchemy>=2.0,<3
+alembic>=1.14,<2
+argon2-cffi>=23.1,<26

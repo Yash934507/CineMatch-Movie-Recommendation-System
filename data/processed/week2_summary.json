@@ -1,0 +1,33 @@
+{
+  "split": {
+    "strategy": "deterministic random holdout within each user",
+    "seed": 42,
+    "test_fraction": 0.2,
+    "training_ratings": 80672,
+    "held_out_ratings": 20164,
+    "evaluation_sample_size": 2000
+  },
+  "model": {
+    "neighbors": 30,
+    "minimum_common_ratings": 3
+  },
+  "user_user": {
+    "rmse": 0.9025394640573728,
+    "mae": 0.6872998212942039,
+    "evaluated_ratings": 2000,
+    "neighbor_prediction_coverage": 0.947,
+    "fallback_predictions": 106
+  },
+  "item_item": {
+    "rmse": 0.8739527345767684,
+    "mae": 0.6616588960777444,
+    "evaluated_ratings": 2000,
+    "neighbor_prediction_coverage": 0.89,
+    "fallback_predictions": 220
+  },
+  "demo_user_id": 1,
+  "demo_trained_on_all_ratings": true,
+  "demo_recommendations_exclude_known_ratings": true,
+  "star_wars_movie_id": 260,
+  "elapsed_seconds": 24.79287149999982
+}
