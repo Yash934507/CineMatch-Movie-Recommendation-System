@@ -1,2 +1,8 @@
-No verified public URL is currently available.
-CineMatch has not been deployed. Hosting was approved, but this environment could not reach GitHub or Render and has no authenticated hosting CLI session.
+Verified public CineMatch demo:
+https://cinematch-u192.onrender.com/
+
+Verified on: 2026-11-08
+Hosting: Render Free, read-only demo
+Checks: homepage, API readiness and health, movie search, SVD and hybrid recommendations.
+
+The free service may sleep after inactivity. Its filesystem is ephemeral and the demo does not support persistent accounts or user changes.

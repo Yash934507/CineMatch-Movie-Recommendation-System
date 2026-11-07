@@ -2,7 +2,7 @@
 
 CineMatch is a local, full-stack movie recommendation application. It combines a React interface with a FastAPI backend and MovieLens Small data to let viewers explore movies, compare recommendation approaches, and build a private account taste profile.
 
-**Project status:** Local development and submission verification only. CineMatch is not deployed.
+**Project status:** A verified, read-only demo is live on Render Free: [Open CineMatch](https://cinematch-u192.onrender.com/). The demo does not support persistent accounts or user changes.
 
 ## Problem statement
 
@@ -150,7 +150,7 @@ The container deployment template is configured for a public, read-only demonstr
 - The Docker frontend build sets `VITE_CINEMATCH_READ_ONLY_DEMO=true` so account prompts are not offered.
 - The Render free-service template uses `/tmp/cinematch-demo.db`; its contents are disposable and must never contain real user records.
 
-Render's free service may sleep after inactivity and its filesystem is ephemeral. This setup is for a read-only project demo, not production authentication or persistent accounts. The project is not deployed until a public URL has been created and verified.
+The [live Render demo](https://cinematch-u192.onrender.com/) was verified on 2026-11-08. The homepage, `/api/v1/ready`, `/api/v1/health`, movie search, and public SVD/hybrid recommendations responded successfully. A synthetic account-registration request was rejected with HTTP 403, confirming the demo is read-only. Render Free may sleep after inactivity and its filesystem is ephemeral; this deployment is for demonstration, not production authentication or persistent accounts.
 
 ### Deploying the read-only demo on Render Free
 
