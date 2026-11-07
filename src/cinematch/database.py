@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from alembic import command
@@ -14,7 +15,25 @@ from .config import settings
 from .models import Base
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ALEMBIC_CONFIG_PATH = PROJECT_ROOT / "alembic.ini"
 DEFAULT_DATABASE_URL = settings.database_url
+
+
+def _create_alembic_config() -> Config:
+    config_path_value = os.getenv("CINEMATCH_ALEMBIC_CONFIG")
+    config_path = Path(config_path_value) if config_path_value else ALEMBIC_CONFIG_PATH
+    if not config_path.is_absolute():
+        raise ValueError("CINEMATCH_ALEMBIC_CONFIG must be an absolute path")
+    if not config_path.is_file():
+        raise FileNotFoundError(f"Alembic configuration not found: {config_path}")
+
+    migrations_path = config_path.parent / "migrations"
+    if not migrations_path.is_dir():
+        raise FileNotFoundError(f"Alembic migrations directory not found: {migrations_path}")
+
+    config = Config(str(config_path))
+    config.set_main_option("script_location", str(migrations_path))
+    return config
 
 
 def get_database_url() -> str:
@@ -60,7 +79,7 @@ def get_db() -> Session:
 
 def initialize_database(database_url: str | None = None) -> None:
     url = database_url or get_database_url()
-    cfg = Config(str(PROJECT_ROOT / "alembic.ini"))
+    cfg = _create_alembic_config()
     cfg.set_main_option("sqlalchemy.url", url)
     command.upgrade(cfg, "head")
 
@@ -70,6 +89,7 @@ __all__ = [
     "ENGINE",
     "SessionLocal",
     "DEFAULT_DATABASE_URL",
+    "ALEMBIC_CONFIG_PATH",
     "create_engine_for_url",
     "get_database_url",
     "get_db",
